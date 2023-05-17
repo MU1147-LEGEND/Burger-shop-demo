@@ -6,7 +6,7 @@
 }
 
 @font-face {
-    font-family: Sofia Pro;
+    font-family: applepro;
     src:url("/fonts/sofiapro-light.otf");
 }
 
@@ -16,7 +16,7 @@ a {
 
 body {
   font: 400;
-  font-family: Sofia Pro;
+  font-family: applepro;
 }
 
 .hero {
@@ -177,7 +177,7 @@ body {
 .aiden h2,
 .ethel h2,
 .fannie h2 {
-  font-family: Helvetica;
+  font-family: applepro;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-weight: 500;
@@ -199,7 +199,7 @@ body {
   overflow: hidden;
 }
 .best-burger h2 {
-  font-family: Helvetica;
+  font-family: applepro;
   text-transform: capitalize;
   font-weight: 500;
   font-size: 40px;
