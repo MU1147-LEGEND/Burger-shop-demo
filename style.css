@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: applepro;
-    src:url("/fonts/sofiapro-light.otf");
+    src:url("./fonts/sofiapro-light.otf");
 }
 
 a {
