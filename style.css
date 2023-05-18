@@ -6,8 +6,8 @@
 }
 
 @font-face {
-    font-family: applepro;
-    src:url("./fonts/sofiapro-light.otf");
+  font-family: applepro;
+  src: url("./fonts/sofiapro-light.otf");
 }
 
 a {
@@ -436,95 +436,189 @@ body {
   border: 1px solid #00ffc3;
 }
 
-.email:focus + .submit:hover{
+.email:focus + .submit:hover {
   border: 1px solid #00ffc3;
 }
 
-
 /* footer design css begin*/
 
-.footer .container{
-	max-width: 1170px;
-	margin:auto;
+.footer .container {
+  max-width: 1170px;
+  margin: auto;
 }
-.footer .row{
-	display: flex;
-	flex-wrap: wrap;
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
 }
-ul{
-	list-style: none;
+ul {
+  list-style: none;
 }
-.footer{
-	background-color: #1e2536;
-    padding: 70px 0;
+.footer {
+  background-color: #1e2536;
+  padding: 70px 0;
 }
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
 }
-.footer-col h4{
-	font-size: 18px;
-	color: #ffffff;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
 }
-.footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #e91e63;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
 }
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
 }
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 300;
-	color: #bbbbbb;
-	display: block;
-	transition: all 0.3s ease;
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
 }
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
 }
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
 }
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
 }
 
 /*responsive*/
-@media(max-width: 767px){
-  .footer-col{
+@media (max-width: 767px) {
+  .footer-col {
     width: 50%;
     margin-bottom: 30px;
+  }
 }
-}
-@media(max-width: 574px){
-  .footer-col{
+@media (max-width: 574px) {
+  .footer-col {
     width: 100%;
+  }
 }
+/* footer design css end*/
+/* ------------------------- */
+
+/* login page css begin*/
+
+.account-container {
+  width: 100%;
+  background-image: linear-gradient(
+    280deg,
+    rgb(10, 222, 230),
+    rgb(160, 35, 233)
+  );
+  height: 100vh;
+  color: white;
 }
 
-/* footer design css end*/
+.account-login {
+  width: 320px;
+  height: 380px;
+  padding: 10px;
+  background-image: linear-gradient(272deg, #604c4cd1, #00000057);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 3px;
+}
+.account-creds .input-group:nth-child(3) label {
+  display: inline;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+#email,
+#password {
+  width: 100%;
+  font-size: 17px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+#email:focus, #password:focus {
+  border: 1px solid #f64b3c;
+}
+
+.account-login h2 {
+  text-align: center;
+  font-size: 30px;
+}
+#submit {
+  font-size: 20px;
+  padding: 7px 45px 7px 45px;
+  display: block;
+  margin: 28px auto auto auto;
+  border: 1px solid #d5caca4f;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-color: tomato;
+}
+
+#submit:hover{
+  border: 1px solid tomato;
+  background-color: white;
+  color: tomato;
+}
+
+.signup{
+  margin:7px auto;
+  text-align: center;
+}
+
+.signup-prompt{
+  font-size: 18px;
+  padding: 7px 20px 7px 20px;
+  border: 1px solid green;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-color: green;
+}
+/* login page css end*/

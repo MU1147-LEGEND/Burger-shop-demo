@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Log in or Sign Up</title>
+  </head>
+  <body>
+    <form action="index.html" method="post">
+        <div class="account-container">
+      <div class="account-login">
+        <h2>Login</h2>
+        <div class="account-creds">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your email" autofocus required/>
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" autocomplete="current-password" required/>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" id="checkbox" /><label for="checkbox" >Remember me</label>
+          </div>
+          <input type="submit" id="submit" value="Log In">
+        </div>
+ <div class="signup">
+        <span>or</span> <br> <br>
+        <a href="signup.html" class="signup-prompt">Sign Up</a>
+    </div>
+      </div>
+    </div>
+    </form>
+  </body>
+</html>
