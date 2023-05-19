@@ -621,4 +621,9 @@ ul {
   transition: 0.5s;
   background-color: green;
 }
+
+.signup-prompt:hover{
+  color: green;
+  background-color: white;
+}
 /* login page css end*/
