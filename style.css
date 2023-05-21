@@ -336,7 +336,7 @@ body {
 .packages .package1:hover,
 .packages .package2:hover,
 .packages .package3:hover {
-  border: 3px solid rgb(103, 31, 238) !important;
+  box-shadow: 1px 0px 8px 8px #1158b69c !important;
   transition: 0.8s !important;
 }
 
