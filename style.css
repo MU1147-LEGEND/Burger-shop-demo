@@ -13,38 +13,43 @@
 a {
   text-decoration: none;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
+  scroll-behavior: smooth;
   font: 400;
   font-family: applepro;
 }
-
-.hero {
+.hero-container{
   background-image: url(images/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 560px;
-}
-
-.hero nav {
-  background-color: rgba(80, 82, 81, 0.548);
-}
-.hero .container {
-  width: 95%;
-  overflow: hidden;
   margin: auto;
 }
+.hero {
+  margin: auto;
+  max-width: 1150px;
+  height: 100vh;
+}
 
-.hero .brand-logo {
+nav {
+  background-color: rgba(80, 82, 81, 0.548);
+}
+.hero-container .container {
+  max-width: 95%;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.brand-logo {
   width: 85px;
   height: 75px;
-  float: left;
   transform: rotate(22deg);
 }
 
 .nav-ul {
-  float: right;
   margin-right: 20px;
 }
 
@@ -134,9 +139,8 @@ body {
 }
 
 .chef {
-  width: 100%;
   background-color: #f6eedf;
-  height: 560px;
+  height: fit-content;
   color: tomato;
 }
 
@@ -152,10 +156,12 @@ body {
 }
 
 .chef-info {
-  /* background-color: rgb(16, 36, 36); */
-  width: 1170px;
+  max-width: 1150px;
   margin: 60px auto auto auto;
+  padding-bottom: 50px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .aiden,
@@ -188,15 +194,19 @@ body {
 .best-burger-section {
   width: 100%;
   background-color: #f64b3c;
-  height: 560px;
+  height: fit-content;
   color: white;
 }
 
 .best-burger {
-  width: 1170px;
+  max-width: 1150px;
   margin: auto;
-  /* text-align: center; */
   overflow: hidden;
+  height: fit-content;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  display: flex;
+  /* flex-direction: row; */
 }
 .best-burger h2 {
   font-family: applepro;
@@ -206,24 +216,17 @@ body {
 }
 
 .best-burger-image {
-  float: left;
-  width: 400px;
+  max-width: 380px;
   border-radius: 50%;
-  margin: 85px auto auto 40px;
+  margin: auto auto auto 15px;
 }
-
-.best-burger-slo {
-  margin: 200px 0px 0px 0px;
-}
-
 .best-burger-slo h2,
 .best-burger-slo p {
-  margin: 30px 50px 30px 600px;
+  margin: auto auto auto 40px;
 }
 .best-burger-slo p {
   margin-bottom: 50px;
 }
-
 .best-burger-order-btn {
   background-color: white;
   color: #f64b3c;
@@ -232,26 +235,23 @@ body {
   font-size: 18px;
   border-radius: 40px;
   text-decoration: none;
-  margin: 0 0 0 157px;
+  margin: auto auto auto 40px;
   padding: 13px 48px 13px 48px;
   transition: 0.5s;
   border: 1px solid white;
 }
-
 .best-burger-order-btn:hover {
   color: white;
   background-color: #f64b3c;
   border: 1px solid white;
   transition: 0.5s;
 }
-
 .statistics-section {
-  width: 100%;
-  height: 570px;
+  max-width: 100%;
+  height: fit-content;
   background-color: #f6eedf;
   text-align: center;
 }
-
 .stat-slo {
   padding: 50px 0 15px 0;
 }
@@ -264,7 +264,13 @@ body {
 .stat-slo p {
   color: tomato;
 }
-
+.circles{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
 .circle1,
 .circle2,
 .circle3 {
@@ -276,36 +282,30 @@ body {
   display: inline-block;
   margin: 50px 21px 35px 50px;
 }
-
 .circle1 h2,
 .circle2 h2,
 .circle3 h2 {
   font-size: 45px;
 }
-
 .circle1 p,
 .circle3 p,
 .circle2 p {
   text-transform: uppercase;
 }
-
 .circle-text {
   color: tomato;
   margin-top: 77px;
 }
-
 .popular-packages {
   width: 100%;
-  height: 580px;
   background-color: tomato;
+  height: fit-content;
+  padding-bottom: 55px;
 }
-
 .popular-packages .container {
-  width: 1170px;
-  height: 580px;
+  max-width: 1150px;
   margin: auto;
 }
-
 .popular-packages .container h2 {
   text-align: center;
   padding: 50px 0 45px 0;
@@ -313,13 +313,12 @@ body {
   font-size: 35px;
   font-weight: 500;
 }
-
 .popular-packages .container .packages {
-  width: 1170px;
+  display: flex;
+  max-width: 1150px;
   height: 400px;
   text-align: center;
 }
-
 .popular-packages .container .packages .package1,
 .popular-packages .container .packages .package2,
 .popular-packages .container .packages .package3 {
@@ -332,14 +331,12 @@ body {
   display: inline-block;
   transition: 0.8s;
 }
-
 .packages .package1:hover,
 .packages .package2:hover,
 .packages .package3:hover {
   box-shadow: 1px 0px 8px 8px #1158b69c !important;
   transition: 0.8s !important;
 }
-
 .packages .package-image {
   width: 100px;
 }
@@ -349,12 +346,10 @@ body {
   font-size: 30px;
   margin: 20px 0 20px 0;
 }
-
 .packages p {
   color: tomato;
   margin: 0 0 30px 0;
 }
-
 .packages .package-order-now {
   background-color: tomato;
   color: white;
@@ -370,27 +365,23 @@ body {
   color: tomato;
   transition: 0.5s;
 }
-
 .newsletter-section {
-  width: 100%;
-  height: 560px;
+  height: fit-content;
   margin: auto;
   background-color: #f6eedf;
 }
-
 .newsletter {
-  width: 1170px;
-  height: 560px;
+  max-width: 1150px;
+  height: fit-content;
   margin: auto;
+  padding: 0 0 70px 0;
 }
-
 .newsletter h2 {
   text-align: center;
   padding: 150px 0 15px 0px;
   color: tomato;
   font-size: 38px;
 }
-
 .newsletter p {
   margin: 20px 200px 100px 200px;
   text-align: center;
@@ -398,7 +389,6 @@ body {
 .newsletter .email-input {
   text-align: center;
 }
-
 .newsletter .email {
   font-size: 18px;
   border: 1px solid tomato;
@@ -409,7 +399,6 @@ body {
   outline: none;
   transition: 0.5s;
 }
-
 .newsletter .submit {
   border: 1px solid #f6eedf;
   background: tomato;
@@ -423,19 +412,16 @@ body {
   cursor: pointer;
   transition: 0.5s;
 }
-
 .newsletter .submit:hover {
   background-color: white;
   color: tomato;
   border: 1px solid tomato;
   transition: 0.5s;
 }
-
 .newsletter .email:focus {
   transition: 0.5s;
   border: 1px solid #00ffc3;
 }
-
 .email:focus + .submit:hover {
   border: 1px solid #00ffc3;
 }
@@ -443,7 +429,7 @@ body {
 /* footer design css begin*/
 
 .footer .container {
-  max-width: 1170px;
+  max-width: 1150px;
   margin: auto;
 }
 .footer .row {
@@ -540,7 +526,6 @@ ul {
   height: 100vh;
   color: white;
 }
-
 .account-login {
   width: 320px;
   height: 380px;
@@ -564,7 +549,6 @@ ul {
   margin-bottom: 20px;
   user-select: none;
 }
-
 #email,
 #password {
   width: 100%;
@@ -576,11 +560,9 @@ ul {
   border-radius: 4px;
   transition: 0.5s;
 }
-
 #email:focus, #password:focus {
   border: 1px solid #f64b3c;
 }
-
 .account-login h2 {
   text-align: center;
   font-size: 30px;
@@ -602,7 +584,6 @@ ul {
   background-color: tomato;
   transform: perspective(1px) translateZ(0);
 }
-
 #submit::before{
   content: "";
   width: inherit;
@@ -624,7 +605,6 @@ ul {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-
 #submit:hover::before{
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
@@ -633,12 +613,10 @@ ul {
   color: tomato;
   border: 1px solid white;
 }
-
 .signup{
   margin:7px auto;
   text-align: center;
 }
-
 .signup-prompt{
   display: inline-block;
   font-size: 18px;
@@ -652,7 +630,6 @@ ul {
   background-color: rgb(153, 8, 236);
   transform: perspective(1px) translateZ(0);
 }
-
 .signup-prompt::before{
   content: "";
   /* width: inherit;
@@ -674,12 +651,122 @@ ul {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-
 .signup-prompt:hover::before{
   transform: scaleX(1);
 }
 
-@keyframes signupbtn{
+/* login page css end*/
+
+
+/* mobile responsive css */
+@media (max-width:480px) and (max-width:750px){
+  .brand-logo{
+    cursor: copy;
+  }
+  .nav-ul{
+    display: none;
+  }
+  .hero{
+    height: 50vh;
+  }
+  .hero h1{
+    margin:85px 20px 10px 40px;
+  }
+  .hero p {
+    margin: 25px 40px 36px 40px;
+    text-align: justify;
+  }
+  .hero .order-btn{
+    cursor: copy;
+    margin: 10px 0px 10px 40px;
+  }
+  .heading p{
+    text-align: justify;
+    margin: auto 40px;
+  }
+  .chef-info{
+    flex-direction: column;
+  }
+  .best-burger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 55px;
+    padding-top: 85px;
+  }
+  .best-burger-slo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .best-burger-image{
+    max-width: 280px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .best-burger-slo h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .best-burger-slo p{
+    margin-bottom: 24px;
+  }
+  .best-burger-order-btn{
+    cursor: none;
+    font-size: medium;
+  }
+  .stat-slo p{
+    text-align: justify;
+    margin: auto 40px;
+  }
+  .circles{
+    flex-direction: column;
+  }
+  .popular-packages .container .packages{
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+  }
+ .newsletter p {
+  margin: 20px 35px 55px 30px;
+  text-align: justify;
+  }
+  .newsletter h2{
+    padding-top: 75px;
+    font-size: 30px;
+  }
+  .newsletter .email{
+    margin-right: -30px;
+    font-size: 12px;
+    padding: 10px 10px 10px 10px;
+  }
+  .newsletter .submit{
+    cursor: copy;
+    font-size: 12px;
+    padding: 10px 10px 10px 10px;
+  }
+  .circle1, .circle2, .circle3{
+    height: 190px;
+    width: 190px;
+    margin: 8px auto 18px auto;
+  }
+  .circle1 h2, 
+  .circle2 h2, 
+  .circle3 h2{
+    font-size: 30px;
+  }
+  .package-order-now{
+    cursor: copy;
+  }
+  .footer-col ul li a{
+    cursor: copy;
+  }
+  .footer-col .social-links a{
+    cursor: copy;
+  }
+
 
 }
-/* login page css end*/
+/* mobile responsive css end */
