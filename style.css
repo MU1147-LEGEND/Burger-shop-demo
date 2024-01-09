@@ -48,7 +48,14 @@ nav {
   height: 75px;
   transform: rotate(22deg);
 }
-
+.brand-link{
+  height: min-content;
+  position: relative;
+}
+.rd{
+  display: none ;
+  transition: all 1s ease-in-out;
+}
 .nav-ul {
   margin-right: 20px;
 }
@@ -68,13 +75,11 @@ nav {
   background-color: rgba(250, 235, 215, 0.034);
   text-transform: uppercase;
 }
-
 .nav-link:hover {
   background-color: violet;
   transition-duration: 0.5s;
   border-radius: 5px;
 }
-
 .hero h1,
 .hero p,
 .order-btn {
@@ -657,14 +662,56 @@ ul {
 
 /* login page css end*/
 
-
+.nav-display{
+  display: flex;
+}
 /* mobile responsive css */
 @media (max-width:480px) and (max-width:750px){
   .brand-logo{
     cursor: copy;
   }
+  nav{
+    background-color: transparent;
+  
+  }
+  .mobile-nav{
+    display: block;
+    margin: auto 0;
+    margin-right: 10px;
+    color: tomato;
+    font-size: 25px;
+    position: fixed;
+    top: 24px;
+    right: 20px;
+    z-index: 2;
+    transition: all 1s ease-in-out;
+  }
+
   .nav-ul{
-    display: none;
+    /* display: flex; */
+    height: 100dvh;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-top: 65px;
+    position: fixed;
+    background-color: #4e235deb;
+    z-index: 2;
+    transition: all 1s ease-in-out;
+  }
+  .nav-link{
+    display: block;
+    padding: 8px 14px;
+    width: 271px;
+    text-align: center;
+    margin: auto;
+    line-height: 27px;
+    margin-top: 20px;
+    background: #e0d4d4f7;
+    color: tomato;
+  }
+  .hero-container .container{
+    max-width: 100%;
   }
   .hero{
     height: 50vh;
