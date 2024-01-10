@@ -28,7 +28,7 @@ function animateCount(countTextElement) {
       clearInterval(timer);
       countTextElement.textContent = endValue.toLocaleString() + "+";
     }
-  }, 16);
+  }, 10);
 
   // Add the "visible" class to make the count text visible during the animation
   countTextElement.classList.add("visible");
@@ -61,7 +61,7 @@ function handleScroll() {
 // Add the scroll event listener
 window.addEventListener("scroll", handleScroll);
  }
- scrollCounter();
+scrollCounter();
 
  //mobile navigation expand script
 function navExpand(){
@@ -80,7 +80,6 @@ function navExpand(){
 }
 navExpand();
 
-
 // Check if scrolled to the top
 function isScrolledToTop() {
   return (document.documentElement.scrollTop || document.body.scrollTop) === 0;
@@ -90,8 +89,7 @@ function isScrolledToBottom() {
   return (document.documentElement.scrollTop + window.innerHeight) >= document.documentElement.scrollHeight;
 }
 
-
-
+// go to top btn scripts
 const gTopElem = document.querySelector(".go-top");
 gTopElem.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
@@ -101,13 +99,6 @@ window.onscroll = function () {
   if (isScrolledToTop()) {
     gTopElem.style.display = "none";
   } else{
-    document.addEventListener("scroll", ()=>{
-      console.log("scrolling");
       gTopElem.style.display = "block";
-    });
   }
 };
-
-
-  
-
