@@ -64,18 +64,50 @@ window.addEventListener("scroll", handleScroll);
  scrollCounter();
 
  //mobile navigation expand script
+function navExpand(){
+  const navIcon = document.getElementById("nav");
+  const navUl = document.querySelector(".nav-ul");
+  if(screen.width > 480){  //for laptop screen
+    navIcon.classList.toggle("rd");
+  }
+  else{ //for mobile screen.
+    navUl.classList.add("rd");
+    navIcon.addEventListener("click", ()=>{
+      navIcon.firstElementChild.classList.toggle("fa-xmark");
+      navUl.classList.toggle("rd");
+    });
+  }
+}
+navExpand();
 
-const navIcon = document.getElementById("nav");
-const navUl = document.querySelector(".nav-ul");
-if(screen.width > 480){  //for laptop screen
-  navIcon.classList.toggle("rd");
+
+// Check if scrolled to the top
+function isScrolledToTop() {
+  return (document.documentElement.scrollTop || document.body.scrollTop) === 0;
 }
-else{ //for mobile screen.
-  navUl.classList.add("rd");
-  navIcon.addEventListener("click", ()=>{
-    navIcon.firstElementChild.classList.toggle("fa-xmark");
-    navUl.classList.toggle("rd");
-  });
+// Check if scrolled to the bottom
+function isScrolledToBottom() {
+  return (document.documentElement.scrollTop + window.innerHeight) >= document.documentElement.scrollHeight;
 }
+
+
+
+const gTopElem = document.querySelector(".go-top");
+gTopElem.addEventListener("click", () => {
+  document.documentElement.scrollTop = 0;
+});
+
+window.onscroll = function () {
+  if (isScrolledToTop()) {
+    gTopElem.style.display = "none";
+  } else{
+    document.addEventListener("scroll", ()=>{
+      console.log("scrolling");
+      gTopElem.style.display = "block";
+    });
+  }
+};
+
+
   
-  
+
