@@ -68,10 +68,9 @@ function navExpand(){
   const navIcon = document.getElementById("nav");
   const navUl = document.querySelector(".nav-ul");
   if(screen.width > 480){  //for laptop screen
-    navIcon.classList.toggle("rd");
+    navIcon.classList.toggle("mobile-nav-change");
   }
   else{ //for mobile screen.
-    navUl.classList.add("rd");
     navIcon.addEventListener("click", ()=>{
       navIcon.firstElementChild.classList.toggle("fa-xmark");
       navUl.classList.toggle("rd");
